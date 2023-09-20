@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[project]
+name = "dipcoatimage-finitedepth-gui"
+description = "GUI for dipcoatimage-finitedepth"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Jisoo Song", email = "jeesoo9595@snu.ac.kr"}
+]
+dependencies = [
+    "dipcoatimage-finitedepth@git+https://github.com/dipcoat-image/finitedepth",
+    "araviq6 >= 2.0.0",
+    "dawiq",
+    "imagesize",
+    "PySide6",
+]
+dynamic = [
+    "version",
+]
+
+[project.urls]
+repository = "https://github.com/dipcoat-image/finitedepth-gui"
+
+[project.optional-dependencies]
+test = [
+    "black",
+    "flake8",
+    "mypy",
+    "pytest",
+    "pytest-qt",
+]
+test-ci = [
+    "dipcoatimage-finitedepth-gui[test]",
+    "pytest-xvfb",
+]
+doc = [
+    "numpydoc",
+    "sphinx",
+    "sphinx_rtd_theme",
+]
+full = ["dipcoatimage-finitedepth-gui[test,doc]"]
+
+[tool.setuptools.dynamic]
+version = {attr = "dipcoatimage.finitedepth_gui.version.__version__"}
