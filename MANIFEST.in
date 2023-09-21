@@ -1,1 +1,2 @@
 include dipcoatimage/finitedepth_gui/py.typed
+include dipcoatimage/finitedepth_gui/icons/*
