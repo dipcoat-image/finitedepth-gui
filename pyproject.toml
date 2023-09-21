@@ -26,9 +26,6 @@ repository = "https://github.com/dipcoat-image/finitedepth-gui"
 
 [project.optional-dependencies]
 test = [
-    "black",
-    "flake8",
-    "mypy",
     "pytest",
     "pytest-qt",
 ]

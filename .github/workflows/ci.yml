@@ -44,7 +44,7 @@ jobs:
 
       - name: install package
         run: |
-          pip install .[test]
+          pip install mypy .[test]
 
       # - name: run mypy check  # Not reproducible in local. Disable for now.
       #   run: mypy .
@@ -100,10 +100,10 @@ jobs:
     steps: 
 
       - name: get repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
 
       - name: install package
         run: |
