@@ -89,7 +89,7 @@ jobs:
         run: |
           pip install .[test-ci]
 
-      # - run: pytest  # No test is added yet.
+      - run: pytest  # No test is added yet.
 
   doc:
 
