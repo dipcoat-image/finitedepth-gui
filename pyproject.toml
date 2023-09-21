@@ -26,6 +26,7 @@ repository = "https://github.com/dipcoat-image/finitedepth-gui"
 
 [project.optional-dependencies]
 test = [
+    "PyYAML",
     "pytest",
     "pytest-qt",
 ]
