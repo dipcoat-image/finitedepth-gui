@@ -107,7 +107,7 @@ jobs:
 
       - name: install package
         run: |
-          pip install .[gui,doc]
+          pip install .[doc]
 
       - name: build document
         run: |
